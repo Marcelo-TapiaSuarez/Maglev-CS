@@ -1,0 +1,9 @@
+/* Centrar imágenes con alt o etiqueta #center */
+img[alt*="center"],
+img[alt*="centrar"],
+a.internal-embed[alt*="center"] img,
+a.internal-embed[alt*="centrar"] img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

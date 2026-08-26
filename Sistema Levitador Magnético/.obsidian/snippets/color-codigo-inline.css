@@ -1,0 +1,53 @@
+/* ============================================================
+   VARIABLES DE CÓDIGO IN-LINE GENERAL (TEXTO NORMAL)
+   ============================================================ */
+
+.theme-dark {
+  --general-code-bg: #1e1e1e;     /* Fondo oscuro para texto normal */
+  --general-code-color: #a9dc76;  /* Naranja/Amarillo para resaltar */
+  --general-code-border: #44475a;
+}
+
+.theme-light {
+  --general-code-bg: #f4f4f4;     /* Fondo claro para texto normal */
+  --general-code-color: #228B22;  /* Rojo carmesí clásico */
+  --general-code-border: #e1e1e8;
+}
+
+/* ============================================================
+   APLICACIÓN A MODO LECTURA (Excluyendo títulos)
+   ============================================================ */
+
+/* Apuntamos solo al código que está dentro de párrafos, listas o tablas */
+.markdown-rendered p code,
+.markdown-rendered li code,
+.markdown-rendered table code {
+  color: var(--general-code-color) !important;
+  background-color: var(--general-code-bg) !important;
+  font-family: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, monospace !important;
+  font-size: 0.85em !important;
+  border: 1px solid var(--general-code-border);
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+}
+
+/* ============================================================
+   APLICACIÓN A MODO EDITOR / LIVE PREVIEW (Excluyendo títulos)
+   ============================================================ */
+
+/* Usamos :not(.HyperMD-header) para asegurar que no toque tus títulos */
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-header) .cm-inline-code {
+  color: var(--general-code-color) !important;
+  background-color: var(--general-code-bg) !important;
+  font-family: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, monospace !important;
+  font-size: 0.85em !important;
+  border: 1px solid var(--general-code-border);
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+}
+
+/* Para que los backticks (`) del editor también coincidan en el texto normal */
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-header) .cm-formatting-code {
+  color: var(--general-code-color) !important;
+  opacity: 0.7;
+}

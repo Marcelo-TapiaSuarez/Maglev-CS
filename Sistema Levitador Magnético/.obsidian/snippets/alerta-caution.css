@@ -1,0 +1,24 @@
+/* Forzar variables de color para el Callout Caution (Rojo) */
+.callout[data-callout="caution"] {
+    --callout-color: 200, 50, 50 !important; /* Rojo oscuro para borde e icono */
+    background-color: rgba(200, 50, 50, 0.1) !important; /* Fondo rojo muy tenue */
+    --callout-title-color: var(--callout-color) !important;
+}
+
+/* Forzar el color del icono explícitamente */
+.callout[data-callout="caution"] .callout-icon {
+    color: var(--callout-color) !important;
+}
+
+/* 1. Ocultamos el viejo icono */
+.callout[data-callout="caution"] .callout-icon svg {
+    display: none;
+}
+
+/* 2. Inyectamos el nuevo SVG usando "content" con los colores variables */
+.callout[data-callout="caution"] .callout-icon::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(200, 50, 50)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16h.01"/><path d="M12 8v4"/><path d="M15.312 2a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586l-4.688-4.688A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2z"/></svg>');
+    display: block;
+    width: 24px;
+    height: 24px;
+}

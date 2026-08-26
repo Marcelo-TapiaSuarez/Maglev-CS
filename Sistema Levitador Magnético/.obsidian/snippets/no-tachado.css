@@ -1,0 +1,11 @@
+/* Esto deshabilita el tachado de todas las tareas completadas */
+.markdown-rendered ul > li.task-list-item.is-checked {
+    text-decoration: none !important;
+    opacity: 1; /* Opcional: Esto evita que el texto se ponga gris/transparente */
+}
+
+/* Si también quieres que el texto del bloque de código no se vea afectado 
+   por otras reglas de Markdown, puedes añadir esta línea: */
+.markdown-rendered .task-list-item-checkbox {
+    cursor: pointer;
+}

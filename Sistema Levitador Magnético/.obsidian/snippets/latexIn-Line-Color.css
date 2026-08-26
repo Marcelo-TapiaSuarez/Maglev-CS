@@ -1,0 +1,27 @@
+/* ==========================================================
+   Heredar color del título en ecuaciones LaTeX (MathJax)
+   Soporte para Vista de Lectura y Live Preview
+   ========================================================== */
+
+/* Vista de Lectura (h1, h2, h3, etc.) */
+h1 .math-inline, h1 .math-inline *,
+h2 .math-inline, h2 .math-inline *,
+h3 .math-inline, h3 .math-inline *,
+h4 .math-inline, h4 .math-inline *,
+h5 .math-inline, h5 .math-inline *,
+h6 .math-inline, h6 .math-inline * {
+    color: currentColor !important;
+}
+
+/* Vista de Edición / Live Preview (.HyperMD-header) */
+.HyperMD-header .math-inline, 
+.HyperMD-header .math-inline * {
+    color: currentColor !important;
+}
+
+/* Opcional: Asegurar que los trazos de las fracciones también cambien */
+h1 mjx-rect, h2 mjx-rect, h3 mjx-rect, 
+h4 mjx-rect, h5 mjx-rect, h6 mjx-rect, 
+.HyperMD-header mjx-rect {
+    background-color: currentColor !important;
+}

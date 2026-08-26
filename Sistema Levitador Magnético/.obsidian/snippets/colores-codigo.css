@@ -1,0 +1,41 @@
+/* ============================================================
+   SINTAXIS DE BLOQUES DE CÓDIGO (MONOKAI REVERSED - BEARDED)
+   Fondo oscuro de alto contraste dentro del tema claro
+   ============================================================ */
+
+.theme-light {
+    /* Fondo negro profundo y texto base */
+    --code-background: #282828 !important; /* Fondo casi negro clásico de Bearded */
+    --code-normal: #f8f8f2 !important;     /* Texto base blanco/hueso */
+
+    /* Paleta vibrante Monokai */
+    --code-comment: #75715e !important;    /* Gris pardo para comentarios (/* ... ) */
+    --code-keyword: #f92672 !important;    /* Rosa neón para reservadas (public, class, int) */
+    --code-function: #a6e22e !important;   /* Verde lima para métodos (Calculator, run) */
+    --code-string: #e6db74 !important;     /* Amarillo para textos ("%s: %d...") */
+    --code-value: #ae81ff !important;      /* Púrpura para números (1, 10) */
+    --code-operator: #f92672 !important;   /* Rosa neón para signos (=, *, <=) */
+    --code-property: #66d9ef !important;   /* Celeste/Cyan para atributos (out, currentThread) */
+    --code-punctuation: #f8f8f2 !important;/* Blanco/hueso para llaves y paréntesis ({, }) */
+}
+
+/* ============================================================
+   SINTAXIS DE BLOQUES DE CÓDIGO (MONOKAI REVERSED - BEARDED)
+   Aplicado al Tema Oscuro
+   ============================================================ */
+
+.theme-dark {
+    /* Fondo negro profundo y texto base */
+    --code-background: #282828 !important; /* Fondo casi negro clásico de Bearded */
+    --code-normal: #f8f8f2 !important;     /* Texto base blanco/hueso */
+
+    /* Paleta vibrante Monokai */
+    --code-comment: #75715e !important;    /* Gris pardo para comentarios (/* ... ) */
+    --code-keyword: #f92672 !important;    /* Rosa neón para reservadas (public, class, int) */
+    --code-function: #a6e22e !important;   /* Verde lima para métodos (Calculator, run) */
+    --code-string: #e6db74 !important;     /* Amarillo para textos ("%s: %d...") */
+    --code-value: #ae81ff !important;      /* Púrpura para números (1, 10) */
+    --code-operator: #f92672 !important;   /* Rosa neón para signos (=, *, <=) */
+    --code-property: #66d9ef !important;   /* Celeste/Cyan para atributos (out, currentThread) */
+    --code-punctuation: #f8f8f2 !important;/* Blanco/hueso para llaves y paréntesis ({, }) */
+}

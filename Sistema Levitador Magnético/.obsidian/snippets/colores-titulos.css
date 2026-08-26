@@ -1,0 +1,167 @@
+/* ============================================================
+   TÍTULOS H1-H6
+   Reading View + Editor / Live Preview
+   Mantiene intacto el código inline dentro de títulos
+   ============================================================ */
+
+body {
+  --title-h1-color: #d6a17c; /* color de # TÍTULO */
+  --title-h2-color: #8fcfd1; /* color de ## TÍTULO */
+  --title-h3-color: #c8b47e; /* color de ### TÍTULO */
+  --title-h4-color: #a8c99c; /* color de #### TÍTULO */
+  --title-h5-color: #9fb7c8; /* color de ##### TÍTULO */
+  --title-h6-color: #c990b8; /* color de ###### TÍTULO */
+}
+
+/* ============================================================
+   VARIABLES DE CÓDIGO IN-LINE ADAPTATIVAS (TEMA OSCURO / CLARO)
+   ============================================================ */
+
+/* --- MODO OSCURO (Mantiene tus colores originales) --- */
+.theme-dark {
+  --title-code-bg: #0d1117;     /* fondo del código inline */
+  --title-code-color: #a9dc76;  /* color del texto del código inline */
+  --title-code-border: #303744; /* borde del código inline */
+}
+
+/* --- MODO CLARO (Nuevos colores para que resalte y se lea bien) --- */
+.theme-light {
+  --title-code-bg: #f4f4f4;     /* fondo gris clarito */
+  --title-code-color: #228B22;  /* texto rojo/carmesí clásico de código */
+  --title-code-border: #e1e1e8; /* borde sutil */
+}
+
+/* ============================================================
+   MODO LECTURA
+   ============================================================ */
+
+.markdown-rendered h1 {
+  color: var(--title-h1-color) !important;
+  font-size: 2em;
+  font-weight: 800;
+  border-bottom: 2px solid var(--title-h1-color);
+  padding-bottom: 0.2em;
+}
+
+.markdown-rendered h2 {
+  color: var(--title-h2-color) !important;
+  font-size: 1.65em;
+  font-weight: 750;
+  border-bottom: 1px solid var(--title-h2-color);
+  padding-bottom: 0.15em;
+}
+
+.markdown-rendered h3 {
+  color: var(--title-h3-color) !important;
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.markdown-rendered h4 {
+  color: var(--title-h4-color) !important;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.markdown-rendered h5 {
+  color: var(--title-h5-color) !important;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.markdown-rendered h6 {
+  color: var(--title-h6-color) !important;
+  font-size: 0.95em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Código inline dentro de títulos - MODO LECTURA */
+.markdown-rendered h1 code,
+.markdown-rendered h2 code,
+.markdown-rendered h3 code,
+.markdown-rendered h4 code,
+.markdown-rendered h5 code,
+.markdown-rendered h6 code {
+  color: var(--title-code-color) !important;
+  background-color: var(--title-code-bg) !important;
+  font-family: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, monospace !important;
+  font-size: 0.85em !important;
+  font-weight: 500 !important;
+  border: 1px solid var(--title-code-border);
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+/* ============================================================
+   MODO EDITOR / LIVE PREVIEW
+   ============================================================ */
+
+/* H1 */
+.markdown-source-view.mod-cm6 .HyperMD-header-1 .cm-header:not(.cm-inline-code):not(.cm-formatting-code) {
+  color: var(--title-h1-color) !important;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+/* H2 */
+.markdown-source-view.mod-cm6 .HyperMD-header-2 .cm-header:not(.cm-inline-code):not(.cm-formatting-code) {
+  color: var(--title-h2-color) !important;
+  font-size: 1.65em;
+  font-weight: 750;
+}
+
+/* H3 */
+.markdown-source-view.mod-cm6 .HyperMD-header-3 .cm-header:not(.cm-inline-code):not(.cm-formatting-code) {
+  color: var(--title-h3-color) !important;
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+/* H4 */
+.markdown-source-view.mod-cm6 .HyperMD-header-4 .cm-header:not(.cm-inline-code):not(.cm-formatting-code) {
+  color: var(--title-h4-color) !important;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+/* H5 */
+.markdown-source-view.mod-cm6 .HyperMD-header-5 .cm-header:not(.cm-inline-code):not(.cm-formatting-code) {
+  color: var(--title-h5-color) !important;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/* H6 */
+.markdown-source-view.mod-cm6 .HyperMD-header-6 .cm-header:not(.cm-inline-code):not(.cm-formatting-code) {
+  color: var(--title-h6-color) !important;
+  font-size: 0.95em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Código inline dentro de títulos - MODO EDITOR */
+.markdown-source-view.mod-cm6 .HyperMD-header .cm-inline-code {
+  color: var(--title-code-color) !important;
+  background-color: var(--title-code-bg) !important;
+  font-family: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, monospace !important;
+  font-size: 0.85em !important;
+  font-weight: 500 !important;
+  border: 1px solid var(--title-code-border);
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+/* Marcas de backtick del código inline en editor */
+.markdown-source-view.mod-cm6 .HyperMD-header .cm-formatting-code {
+  color: var(--title-code-color) !important;
+  opacity: 0.7;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}

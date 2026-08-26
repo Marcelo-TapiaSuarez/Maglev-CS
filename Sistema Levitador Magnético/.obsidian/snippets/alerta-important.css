@@ -1,0 +1,24 @@
+/* 1. Definimos los colores forzando la sintaxis estricta */
+.callout[data-callout="important"] {
+    --callout-color: 255, 165, 0 !important; 
+    --callout-title-color: rgb(255, 165, 0) !important; /* Corregido: rgb() explícito */
+    background-color: rgba(255, 165, 0, 0.15) !important; /* Corregido: background-color directo */
+}
+
+/* 2. Forzamos el color del contenedor del icono */
+.callout[data-callout="important"] .callout-icon {
+    color: rgb(255, 165, 0) !important;
+}
+
+/* 3. Ocultamos el viejo icono */
+.callout[data-callout="important"] .callout-icon svg {
+    display: none !important;
+}
+
+/* 4. Inyectamos el nuevo SVG */
+.callout[data-callout="important"] .callout-icon::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 165, 0)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 1-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/><path d="M12 15h.01"/><path d="M12 7v4"/></svg>');
+    display: block;
+    width: 24px;
+    height: 24px;
+}

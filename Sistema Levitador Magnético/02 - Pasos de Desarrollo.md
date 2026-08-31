@@ -30,6 +30,3 @@ Aquí tienes un plan de acción paso a paso para arrancar:
 * Debes elaborar un informe describiendo el proceso de diseño, utilizando el lenguaje técnico apropiado. Al momento de redactar todo el desarrollo matemático y estructurar las subfiguras en LaTeX usando VS Code, te resultará más cómodo activar el ajuste de texto (Word Wrap) directamente desde el menú "View" o la paleta de comandos, especialmente para evitar que los atajos de teclado entren en conflicto con la superposición del software de tu GPU.  
 * Finalmente, compila el PDF de tu reporte. Recuerda que el archivo debe ser nombrado con la estructura `Apellido1-Apellido2.TFI.SCI Año de cursado.pdf`.  
 
----
-
-¿Te gustaría que veamos en detalle cómo plantear esa primera ecuación de la suma de fuerzas de Newton para el Paso 1?

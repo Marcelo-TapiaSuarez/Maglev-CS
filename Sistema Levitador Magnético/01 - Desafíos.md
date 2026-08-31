@@ -25,5 +25,3 @@ Dado que no vas a armar la maqueta, la simulación será tu "realidad". Deberás
 ---
 
 **En resumen:** es un proyecto matemáticamente exigente porque la planta es inestable, pero esto es precisamente lo que te permite lucirte aplicando todas las técnicas fuertes de la materia (álgebra de bloques, análisis temporal y frecuencial).  
-
-¿Te gustaría que te pase la estructura básica de las dos ecuaciones diferenciales (la eléctrica y la mecánica) para que veas si te resulta cómodo trabajarlas?

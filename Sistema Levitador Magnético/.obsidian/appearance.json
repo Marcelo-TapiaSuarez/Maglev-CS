@@ -1,3 +1,14 @@
 {
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "alerta-caution",
+    "alerta-important",
+    "centrar-imagenes",
+    "color-codigo-inline",
+    "colores-codigo",
+    "colores-titulos",
+    "latexIn-Line-Color",
+    "lista",
+    "no-tachado"
+  ]
 }
